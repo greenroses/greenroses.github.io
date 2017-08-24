@@ -28,7 +28,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6 clickable text-center">
-                    <img src="images/tm.bmp" class="img-responsive" alt="thermal mechanical analysis" data-toggle="modal" data-target="#project0">
+                    <img src="images/tm.jpg" class="img-responsive" alt="thermal mechanical analysis" data-toggle="modal" data-target="#project0">
                     <h3 class="text-uppercase underline-on-hover" data-toggle="modal" data-target="#project0">Thermal mechanical analysis</h3>
                     <p>Developed coupled thermal mechanical model of low pressure die casting process of aluminum alloy wheels with finite element analysis software ABAQUS</p>
                 </div>
@@ -45,7 +45,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4 clickable text-center">
-                    <img src="images/thermal.png" class="img-responsive" alt="thermal analysis" data-toggle="modal" data-target="#project2">
+                    <img src="images/contour.png" class="img-responsive" alt="thermal analysis" data-toggle="modal" data-target="#project2">
                     <h3 class="text-uppercase underline-on-hover" data-toggle="modal" data-target="#project2">3D thermal analysis</h3>
                     <p>Developed 3D simulation models to investigate heat transfer in wheel casting process</p>
                 </div>
@@ -55,7 +55,7 @@
                     <p>Designed a testing method with displacement sensor to characterize the air gap evolution at the casting/die interface</p>
                 </div>
                 <div class="col-md-4 clickable text-center">
-                    <img src="images/byd.png" class="img-responsive" alt="wheel design" data-toggle="modal" data-target="#project4">
+                    <img src="images/byd.jpg" class="img-responsive" alt="wheel design" data-toggle="modal" data-target="#project4">
                     <h3 class="text-uppercase underline-on-hover" data-toggle="modal" data-target="#project4">Wheel / die design</h3>
                     <p>Designed alunimum wheels and dies for rapid prototyping using AutoCAD, CATIA and UG</p>
                 </div>
@@ -70,8 +70,52 @@
                         <h4 class="modal-title" id="myModalLabel">Thermal Mechanical Analysis</h4>
                     </div>
                     <div class="modal-body">
-                        <img class="img-responsive" src="images/tm.bmp">
-                        This was my first project in this class. I learned a lot about HTML and CSS.
+                        <img class="img-responsive" src="images/tm.jpg">
+                        <p>This is my master thesis project. The objective of this project is to improve the understanding of the interfacial heat transfer behavior in the Low-Pressure Die Casting (LPDC) process, which is the dominant commercial technology for the production of A356 aluminum alloy wheels, and to develop an improved methodology/expression for calculating the heat transfer across the wheel/die interface. To formulate and assess expressions for the interfacial behavior, I developed a 2D-axisymmetric coupled thermo-mechanical model using the commercial finite element package, ABAQUS. The model was capable of predicting the thermal history, wheel deformation and the variation of the air gap and pressure along the wheel/die interface.</p>
+                        <p>The temperature predictions of the coupled thermo-mechanical model were compared with temperature measurements obtained at Canadian Auto Parts Toyota Inc obtained on a production water-cooled die.</p>
+                        <p>Initially, the coupled thermo-mechanical model was run with a temperature dependent interfacial heat transfer coefficient to obtain preliminary air gap and pressure behavior at various locations. Based on comparisons with the thermocouple measurements, it was found that the model was able to qualitatively, and at some locations quantitatively, predict the temperature changes from the main physical phenomena occurring during the casting process.</p>
+                        <p>The preliminary air gap and pressure predictions were used to develop a temperature, gap size and pressure dependent interfacial heat transfer coefficient based on literature review. After implementing the interfacial heat transfer coefficient in the model, the agreement between the model predictions and measured temperatures was significantly improved. However, the model was still prone to numerical convergence issues.</p>
+                        <p>To overcome this challenge, I further proposed a new methodology of incrementally changing the interfacial heat transfer coefficient has been proposed to solve the issues. The methodology was implemented in an EXCEL spreadsheet to test its effectiveness. The calculated interfacial heat transfer coefficients with this new methodology were found to be continuous, better reflecting the effects of air gap and pressure evolution.</p>
+                        <figure>
+                            <img class="img-responsive" src="images/tm/geometry_3d.png" alt="geometry_3d">
+                            <figcaption>Wheel and die geometry of 3D thermal model showing die sections</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="img-responsive" src="images/tm/mesh.png" alt="mesh">
+                            <figcaption>Mesh of 2D axisymmetric coupled thermo-mechanical model with zoomed in view of the finer interface mesh</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="img-responsive" src="images/tm/initial.png" alt="initial">
+                            <figcaption>Initial temperature distributions in the die and the wheel</figcaption>
+                        </figure>
+
+                        <figure>
+                            <img class="img-responsive" src="images/tm/htc1.png" alt="T dependent htc">
+                            <figcaption>Interfacial heat transfer coefficient as a function of temperature h(T)</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="img-responsive" src="images/tm/htc2.png" alt="T, d, P dependent htc">
+                            <figcaption>Interfacial heat transfer coefficient as a function of T, gap size and pressure: h(T, d, P)</figcaption>
+                        </figure>
+
+                        <figure>
+                            <img class="img-responsive" src="images/tm/gaps.jpg" alt="gaps">
+                            <figcaption>Temperature contours along with deformation at 154s (Note: the deformation is magnified 10 times.)</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="img-responsive" src="images/tm/interfacial_behavior.jpg" alt="interfacial_behavior">
+                            <figcaption>Interfacial behaviour of model with h(T, d, P)</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="img-responsive" src="images/tm/tc_locations.png" alt="TC locations">
+                            <figcaption>Location of thermocouples</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="img-responsive" src="images/tm/tc_1.png" alt="TC results 1">
+                            <img class="img-responsive" src="images/tm/tc_52.png" alt="TC results 52">
+                            <img class="img-responsive" src="images/tm/tc_5.png" alt="TC results 5">
+                            <figcaption>Comparisons of predicted and measured temperatures</figcaption>
+                        </figure>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -145,10 +189,6 @@
                             <img class="img-responsive" src="images/trial/sd_results.jpg" alt="side die results">
                             <figcaption>Comparison of thermocouple data and ProCast model data at side die</figcaption>
                         </figure>
-
-
-
-
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -165,8 +205,40 @@
                         <h4 class="modal-title" id="myModalLabel">3D Thermal Analysis</h4>
                     </div>
                     <div class="modal-body">
-                        <img class="img-responsive" src="images/thermal.png">
-                        This was my first project in this class. I learned a lot about HTML and CSS.
+                        <p>This project was part of the joint research project between CITIC Dicastal and the University of British Columbia (UBC). Due to confidentiality reasons, sensitive informations in the images are masked and only the general information about the project is shared here.</p>
+                        <p>A flow-formed wheel was selected for this project. A 3D thermal model of the wheel casting process has been developed with finite element analysis software ABAQUS. To reduce computational time, a 20-degree slice of the wheel and die was used in this model. The mesh was developed with the meshing software ICEM. The cooling channel timing and die actuation timing were input to the model based on the casting process. The various boundary conditions needed in the model, such as cooling water temperatures, environmental temperatures and fill parameters were obtained from the plant trial. The other boundary conditions, such as temperature dependent heat transfer coefficients at wheel/die interface were implemented within a user-defined subroutine supported by ABAQUS and were based on my master's work, and refined by trial and error.</p>
+                        <figure>
+                            <img class="img-responsive" src="images/thermal/geometry.png" alt="20 degree geometry">
+                            <figcaption>20-degree slice of the wheel and die</figcaption>
+                        </figure>
+                        <p>The model was run in a cyclic mode, in which the temperature distribution in the die at the end of a given casting cycle was input as the initial die temperature distribution in the subsequent cycle. This process was continued until cyclic steady state was achieved. With the current wheel and die geometry, it took about 12 cycles to reach steady state. The total computational time was about 125 hours with 4 processors.</p>
+                        <p>The figure below shows the die temperature distribution at the beginning of a cycle after steady state has been achieved. This die temperature distribution was applied as initial die temperature in on-going development of the model to reduce the computational time.</p>
+                        <figure>
+                            <img class="img-responsive" src="images/thermal/contour.png" alt="contour">
+                            <figcaption>Temperature distribution at the beginning of a cycle after steady state has been reached</figcaption>
+                        </figure>
+                        <p>Since filliing/fluid flow was not simulated in ABAQUS, the effect of die filling was accommodated by applying initial temperature gradient in the wheel, and by adding a subroutine to control when to turn on wheel/die interfacial heat transfer coefficient.</p>
+                        <figure>
+                            <img class="img-responsive" src="images/thermal/initial.png" alt="initial temperature in the wheel">
+                            <figcaption>Initial temperature gradient in the wheel</figcaption>
+                        </figure>
+                        <p>The temperatures predicted by the 3D thermal model was compared with temperature data measured in the plant trial. Selective results are shown in the figures below. The model correctly predicted the temperature changes resulting from the main physical phenomena occurring during a casting cycle. The differences between the measured and predicted temperatures may be caused by a variety of factors, such as the filling process, wheel/die interfacial heat transfer and the water cooling channel heat transfer.</p>
+                        <figure>
+                            <img class="img-responsive" src="images/thermal/result_sd.png" alt="SD results">
+                            <figcaption>Comparisons of the model prediction and measured temperature data in the side die</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="img-responsive" src="images/thermal/result_bd.png" alt="BD results">
+                            <figcaption>Comparisons of the model prediction and measured temperature data in the bottom die</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="img-responsive" src="images/thermal/result_td.png" alt="TD results">
+                            <figcaption>Comparisons of the model prediction and measured temperature data in the top die</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="img-responsive" src="images/thermal/result_wheel.png" alt="wheels results">
+                            <figcaption>Comparisons of the model prediction and measured temperature data in the wheel</figcaption>
+                        </figure>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -185,7 +257,6 @@
                     <div class="modal-body">
                         <img class="img-responsive" src="images/sensor.png">
                         <p>This technique was developed during my master's study. The objective was to characterize the air gap evolution at the casting/die interface during the aluminum alloy wheel casting process, and the collected data would be used to validate the coupled thermal-mechanical simulation model.</p>
-
                         <p>The device selected was the <a href="http://www.kamansensors.com/html_pages/Extreme_Environment.html" target="_blank"><u>Kaman High Temperautre Displacement Sensor</u></a>. The sensor is based on inductive eddy current technology, which can provide accurate non-contacting measurement of conductive surface motion in hostile environments.</p>
                         <figure>
                             <img class="img-responsive" src="images/displacement/kamansensors.bmp" alt="kanman sensors">
@@ -197,8 +268,6 @@
                         <P><img class="img-responsive" src="images/displacement/setup.png" alt="displacement sensor setup"></P>
                         <p>A simple test was performed to check whether the sensor could actually detect the displacement of an A356 sample with a quartz disc in between the sensor and the sample, and to assess the accuracy of the fitting equation derived from calibration data. The displacement sensor was installed in a steel tube with a quartz disc as shown in the Figure above. The tube was fixed to the lab bench. A square piece of A356 was machined from the mid-height of a wheel rim and used as the target sample in the test. The target sample was fixed to an aluminum gauge block with a C-clamp and placed on a horizontal steel plate to ensure that the target surface of the sample was parallel to the face of the sensor. The target sample was placed at known distances from the sensor by inserting shim stocks or gauge blocks of different thicknesses in between the quartz disc and the target sample. The thickness of the shim stock and gauge block was measured with a micrometer. The voltage output from the sensor was recorded and converted to displacement.</p>
                         <p>This testing proved that KD-1950 displacement sensor could detect the displacement of a room temperature A356 target with a quartz disc in between. At the time of my graduation, the sensor was being used on a sand casting to test its performance at high temperature. These tests would further verify its capabilities to measure the wheel/die air gap evolution in the relevant temperature range. </p>
-
-
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -215,7 +284,8 @@
                         <h4 class="modal-title" id="myModalLabel">Wheel / Die Design</h4>
                     </div>
                     <div class="modal-body">
-                        <img class="img-responsive" src="images/byd.png">
+                        <img class="img-responsive" src="images/byd.jpg">
+                        <p></p>
                         <p>This is a 16-inch 4-double-spoke aluminum alloy wheel that I designed for BYD electric cars when I was working at CITIC Dicastal.</p>
                         <p>The front face design mockup was provided by the customer, and I turned it into a 3D design. The design was iterated several times until its mechanical reliability simulated by FEA was satisfactory. Then, the wheel was prototypted and tested to ensure it met all the product specifications. Key specifications include material properties (hardness, elongation,etc), mechanical performance (airtightness, fatigue performance, impact strength, etc), dimension and weight, etc. If the prototype failed to meet one of the specifications, the design would need to be modified, protopyted and tested again. The design was iterated several times until all the product specifications were met. </p>
                         <p>Besides wheels, I also designed several dies for low pressure die casting. The cooling technology used in the dies were water cooling and air cooling. Due to confidentiality reasons, the die designs are not shared here.</p>
